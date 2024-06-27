@@ -1,4 +1,4 @@
-.headerflex {
+.header-flex {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@
       height: auto;
     }
   }
+}
   .formulaire {
     display: flex;
     justify-content: center;
@@ -32,7 +33,7 @@
       font-weight: 500;
     }
   }
-}
+
 nav {
   background-color: rgb(243, 243, 243);
   padding-bottom: 30px;

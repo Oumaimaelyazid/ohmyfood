@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* Variables */
 $primary-color: rgb(12, 12, 12);
 $secondary-color: rgb(234, 234, 234); 
@@ -9,7 +14,6 @@ body {
   font-family: 'Roboto', 'Shrikhand', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: $secondary-color;
   color: $text-color;
 }
 
@@ -22,7 +26,7 @@ body {
     align-items: center;
     justify-items: center;
     width: 100%;
-    position: relative;
+    margin: 0;
   
     .logo {
       
@@ -43,12 +47,12 @@ body {
   }
 
 }
-.image-restau {
-    img{
+.image-restau img{
     width: 100%; /* Adjust logo size as needed */
-    margin-bottom: 10px;
+    margin: 0;
+    
 }
-}
+
 .restau-title {
     display: flex;
     justify-content: space-between;
@@ -57,8 +61,15 @@ body {
     font-family: 'Shrikhand', cursive;
     color: black;
 }
-.restau-menu {
-    border-radius: 20px;
+.card-menu {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    width:100%;
+    background-color: $secondary-color;
+    top: 10;
+    z-index: 10;
+    padding: 20px;
+    padding-top: 50px;
 
 
 h1 {
@@ -79,15 +90,11 @@ h2 {
 }
 }
 /* Menu cards */
-.restau-menu {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
+
 .menu-cards {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -99,7 +106,7 @@ h2 {
     .card {
       background-color: white;
       width: 100%;
-      margin: 10px;
+      margin: 10px auto;
       padding: 5px;
       border-radius: 10px;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);

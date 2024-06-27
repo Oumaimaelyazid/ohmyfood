@@ -1,4 +1,4 @@
-.headerflex {
+.header-flex {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -6,17 +6,18 @@
   justify-items: center;
   width: 100%;
 }
-.headerflex .logo {
+.header-flex .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px;
 }
-.headerflex .logo img {
+.header-flex .logo img {
   max-width: 50%; /* Ajustez le pourcentage selon les besoins */
   height: auto;
 }
-.headerflex .formulaire {
+
+.formulaire {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +25,7 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   width: 100%;
 }
-.headerflex .formulaire p {
+.formulaire p {
   margin-left: 20px;
   font-size: 18px;
   font-family: Roboto, sans-serif;
@@ -266,13 +267,18 @@ footer ul li i {
   margin-right: 1px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Variables */
 /* Global styles */
 body {
   font-family: "Roboto", "Shrikhand", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: rgb(234, 234, 234);
   color: rgb(7, 7, 7);
 }
 
@@ -285,7 +291,7 @@ body {
   align-items: center;
   justify-items: center;
   width: 100%;
-  position: relative;
+  margin: 0;
 }
 .header-flex .logo {
   margin: 20px;
@@ -304,7 +310,7 @@ body {
 
 .image-restau img {
   width: 100%; /* Adjust logo size as needed */
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .restau-title {
@@ -316,18 +322,25 @@ body {
   color: black;
 }
 
-.restau-menu {
-  border-radius: 20px;
+.card-menu {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  width: 100%;
+  background-color: rgb(234, 234, 234);
+  top: 10;
+  z-index: 10;
+  padding: 20px;
+  padding-top: 50px;
 }
-.restau-menu h1 {
+.card-menu h1 {
   font-size: 2rem;
 }
-.restau-menu i {
+.card-menu i {
   font-size: 2rem;
   color: rgb(12, 12, 12);
   font-weight: 100;
 }
-.restau-menu h2 {
+.card-menu h2 {
   font-size: 1.2rem;
   margin: 20px;
   color: rgb(12, 12, 12);
@@ -335,16 +348,10 @@ body {
 }
 
 /* Menu cards */
-.restau-menu {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
 .menu-cards {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -357,7 +364,7 @@ body {
 .menu-cards a .card {
   background-color: white;
   width: 100%;
-  margin: 10px;
+  margin: 10px auto;
   padding: 5px;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
