@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header-flex {
   text-align: center;
   display: flex;
@@ -308,9 +309,17 @@ body {
   font-size: 1.5rem;
 }
 
+.image-restau {
+  position: relative;
+  width: 100%;
+  height: 275px; /* Ajustez cette valeur selon la hauteur de l'image */
+}
+
 .image-restau img {
   width: 100%; /* Adjust logo size as needed */
   margin: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .restau-title {
@@ -326,11 +335,13 @@ body {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   width: 100%;
+  position: relative;
+  bottom: 30px; /* Ajustez cette valeur pour déplacer l'élément vers le haut */
   background-color: rgb(234, 234, 234);
-  top: 10;
-  z-index: 10;
   padding: 20px;
   padding-top: 50px;
+  z-index: 10;
+  margin-bottom: 0;
 }
 .card-menu h1 {
   font-size: 2rem;
@@ -359,7 +370,7 @@ body {
 .menu-cards a {
   width: 100%;
   display: flex;
-  justify-content: baseline;
+  justify-content: center;
 }
 .menu-cards a .card {
   background-color: white;
@@ -450,6 +461,13 @@ footer ul li a {
 }
 footer ul li i {
   margin-right: 1px;
+}
+
+footer {
+  position: static;
+  width: 100%;
+  margin-top: 0;
+  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
