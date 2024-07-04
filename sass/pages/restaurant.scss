@@ -130,9 +130,64 @@ h1 {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
+      transition: all 0.3s ease;
       
+      .card-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .content-wrapper {
+          display: flex;
+          align-items:center;
+          flex-grow: 1; // Pour occuper l'espace restant
+        }
+        
+        .ellipsis {
+          white-space:nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: calc(100% - 70px); // Ajustez la largeur en fonction de l'icône
+          transition: max-width 0.3s ease;
+        }
+
+        h4{
+          font-size: 18px;
+          font-weight: bold;
+          color: black;
+          transition: transform 0.3s ease; // Animation du prix
+          margin-left:auto; // Le prix reste à droite
+        }
+      }
+        .fa-circle-check {
+          font-size: 2.5rem;
+          background-color:aquamarine ;
+          
+          color: rgb(255, 255, 255);
+          transition:all 0.3s ease ;
+          opacity: 0;
+          margin-left: 0px;
+        }
+      }
+      
+      &:hover {
+      .card-content .fa-circle-check {
+        opacity: 1;
+        margin-left: 20px; // Légère modification pour un effet visuel
+        background-color: aquamarine;
+
+      }
+      .card-content h4 {
+        transform: translateX(-10px); // Animation du prix vers la gauche
+      }
+      .card-content p.ellipsis {
+        max-width: calc(100% - 40px); // Ajustez en fonction de l'icône et de l'espace supplémentaire pour l'animation
+      }      }
     }
-} }
+    }
+ 
 
 h3 {
     color: black;
@@ -140,16 +195,12 @@ h3 {
 .card-content  {
     display: flex;
     justify-content: space-between;
-    p {
+    p.ellipsis {
         margin-top: 5px;
         color: rgba(0, 0, 0, 1);
         font-size: 17px;
     }
-     h4{
-      font-size: 18px;
-      font-weight: bold;
-      color: black;
-    }
+    
 }
     a {
         text-decoration: none !important;
@@ -160,7 +211,7 @@ h3 {
     footer {
       position:static;
       width:100%;
-      margin-top: 0;
+      margin-top: -31px;
       padding: 20px;
       
     }

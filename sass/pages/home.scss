@@ -22,6 +22,7 @@ body {
     flex-direction: column;
     position: relative;
    
+   
     .button-container {
      position: relative;
      margin-bottom: 20px;
@@ -79,15 +80,19 @@ body {
        justify-content: center;
        align-items: center;
      
-       .fa-store {
-         color: rgb(147, 86, 220);
-         margin-right: 10px;
-       }
+       
      
-       .fa-list-ul, .fa-mobile-screen-button {
-         color: rgb(126, 126, 126);
+       .fa-store, .fa-list-ul, .fa-mobile-screen-button {
+        color: rgb(126, 126, 126);
          margin-right: 10px;
    
        }
+
+       &:hover {
+        .fa-store, .fa-list-ul, .fa-mobile-screen-button {
+          color: rgb(147, 86, 220);
+        }
+      }
+       }
      }
-   }
+   

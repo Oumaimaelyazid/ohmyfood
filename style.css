@@ -1,19 +1,14 @@
 @charset "UTF-8";
-.header-flex {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  width: 100%;
-}
-.header-flex .logo {
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
 }
-.header-flex .logo img {
+.logo img {
   max-width: 50%; /* Ajustez le pourcentage selon les besoins */
   height: auto;
 }
@@ -25,12 +20,17 @@
   background-color: rgb(234, 234, 234);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   width: 100%;
+  padding: 20px;
 }
 .formulaire p {
   margin-left: 20px;
   font-size: 18px;
   font-family: Roboto, sans-serif;
   font-weight: 500;
+  color: rgb(53, 53, 53);
+}
+.formulaire .localite-icone {
+  color: rgb(53, 53, 53);
 }
 
 nav {
@@ -227,13 +227,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-.button-de-fonctionnement button .fa-store {
-  color: rgb(147, 86, 220);
-  margin-right: 10px;
-}
-.button-de-fonctionnement button .fa-list-ul, .button-de-fonctionnement button .fa-mobile-screen-button {
+.button-de-fonctionnement button .fa-store, .button-de-fonctionnement button .fa-list-ul, .button-de-fonctionnement button .fa-mobile-screen-button {
   color: rgb(126, 126, 126);
   margin-right: 10px;
+}
+.button-de-fonctionnement button:hover .fa-store, .button-de-fonctionnement button:hover .fa-list-ul, .button-de-fonctionnement button:hover .fa-mobile-screen-button {
+  color: rgb(147, 86, 220);
 }
 
 footer {
@@ -388,6 +387,52 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.menu-cards a .card .card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.menu-cards a .card .card-content .content-wrapper {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.menu-cards a .card .card-content .ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 70px);
+  transition: max-width 0.3s ease;
+}
+.menu-cards a .card .card-content h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  transition: transform 0.3s ease;
+  margin-left: auto;
+}
+.menu-cards a .card .fa-circle-check {
+  font-size: 2.5rem;
+  background-color: aquamarine;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  opacity: 0;
+  margin-left: 0px;
+}
+.menu-cards a:hover .card-content .fa-circle-check {
+  opacity: 1;
+  margin-left: 20px;
+  background-color: aquamarine;
+}
+.menu-cards a:hover .card-content h4 {
+  transform: translateX(-10px);
+}
+.menu-cards a:hover .card-content p.ellipsis {
+  max-width: calc(100% - 40px);
 }
 
 h3 {
@@ -398,15 +443,10 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
-.card-content p {
+.card-content p.ellipsis {
   margin-top: 5px;
   color: rgb(0, 0, 0);
   font-size: 17px;
-}
-.card-content h4 {
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
 }
 
 a {
@@ -470,7 +510,7 @@ footer ul li i {
 footer {
   position: static;
   width: 100%;
-  margin-top: 0;
+  margin-top: -31px;
   padding: 20px;
 }
 

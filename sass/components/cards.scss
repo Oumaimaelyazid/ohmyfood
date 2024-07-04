@@ -69,16 +69,22 @@
       font-size: 1.5rem;
       margin-top: 10px;
       color:rgb(68, 64, 72);
-      
-    }
-  }
-    &.second-card .card-title i {
-      color: rgb(147, 86, 220);
+      transition: color 0.3s ease; /* Transition pour un effet de changement de couleur en douceur */
 
-    }
+      
+    
+    &:hover {
+      .fa-heart {
+      color: rgb(147, 86, 220);
+  }
+}
+}
+  }
     p {
       font-size: 1.3rem;
       margin-top: 2px;
     }
-  }
+  
+    
+}
   
