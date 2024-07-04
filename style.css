@@ -139,8 +139,9 @@ nav p {
   font-size: 1.5rem;
   margin-top: 10px;
   color: rgb(68, 64, 72);
+  transition: color 0.3s ease; /* Transition pour un effet de changement de couleur en douceur */
 }
-.card.second-card .card-title i {
+.card .card-title i:hover .fa-heart {
   color: rgb(147, 86, 220);
 }
 .card p {
@@ -235,6 +236,12 @@ body {
   color: rgb(147, 86, 220);
 }
 
+@media (min-width: 768px) {
+  .button-de-fonctionnement {
+    display: flex;
+    flex-direction: row;
+  }
+}
 footer {
   background-color: rgb(53, 53, 53);
   padding: 10px;
@@ -512,6 +519,66 @@ footer {
   width: 100%;
   margin-top: -31px;
   padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .card-menu {
+    width: 80%; /* Ajustez la largeur selon vos besoins */
+    margin: 0 auto; /* Centre l'article .card-menu */
+  }
+  .menu-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  h2 {
+    padding-left: 200px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-bottom: none !important;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 110%;
+    transform: translateX(-50%);
+    width: 20%;
+    border-bottom: solid 3px rgb(153, 226, 208);
+  }
+  .restau-title {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .button-container {
+    margin: 20px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  .image-restau {
+    width: 100%;
+    overflow: hidden;
+    height: 383px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
