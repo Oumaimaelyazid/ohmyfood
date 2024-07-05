@@ -82,7 +82,7 @@ body {
      
        
      
-       .fa-store, .fa-list-ul, .fa-mobile-screen-button {
+       .fa-store, .fa-list-ul, .fa-mobile-screen-button{
         color: rgb(126, 126, 126);
          margin-right: 10px;
    
@@ -94,6 +94,13 @@ body {
         }
       }
     }
+    .heart-icon {
+      font-weight: 300; // This won't affect Font Awesome, but it's here for completeness
+    
+      &:hover {
+        color: rgb(147, 86, 220);
+      }
+    }
   }
   @media(min-width: 768px) {
     .button-de-fonctionnement {
@@ -101,4 +108,36 @@ body {
       flex-direction: row;
 
   }
+  h1 {
+    margin-left: 150px;
+    margin: 50px;
+  }
+  .restaurants-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    gap: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin:50px ;
+
+  }
+
+  .image-restau {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .image-restau img {
+    width: 100%;
+
+  }
+
+  h2 {
+    padding-left: 10px;
+    border-bottom: none !important; 
+    }
+p {
+  padding-left: 10px;
 }
+
+ }

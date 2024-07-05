@@ -149,99 +149,6 @@ nav p {
   margin-top: 2px;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Roboto, sans-serif;
-}
-
-.boutton-de-fonctionnement {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.boutton-de-fonctionnement .circle {
-  background-color: rgb(147, 86, 220);
-  color: white;
-  width: 26px;
-  height: 24px;
-  border-radius: 100%;
-}
-
-.button-de-fonctionnement {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.button-de-fonctionnement .button-container {
-  position: relative;
-  margin-bottom: 20px;
-  width: 100%;
-}
-.button-de-fonctionnement .button-container a {
-  text-decoration: none;
-}
-.button-de-fonctionnement .button-container .choix-restau {
-  width: 90%;
-}
-.button-de-fonctionnement .button-container .degustation-restau {
-  width: 90%;
-}
-.button-de-fonctionnement .button-container .compo-menu {
-  width: 90%;
-}
-.button-de-fonctionnement .button-container .circle {
-  background-color: rgb(147, 86, 220);
-  color: white;
-  width: 26px;
-  height: 24px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: -10px;
-  right: 20px;
-}
-.button-de-fonctionnement .button-container.container-1 .circle {
-  top: 20px;
-  left: 10px;
-}
-.button-de-fonctionnement .button-container.container-2 .circle {
-  top: 20px;
-  left: 10px;
-}
-.button-de-fonctionnement .button-container.container-3 .circle {
-  top: 20px;
-  left: 10px;
-}
-.button-de-fonctionnement button {
-  background-color: rgb(246, 246, 246);
-  border: none;
-  height: 72.38px;
-  border-radius: 20px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  font-weight: bold;
-  font-size: 18px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.button-de-fonctionnement button .fa-store, .button-de-fonctionnement button .fa-list-ul, .button-de-fonctionnement button .fa-mobile-screen-button {
-  color: rgb(126, 126, 126);
-  margin-right: 10px;
-}
-.button-de-fonctionnement button:hover .fa-store, .button-de-fonctionnement button:hover .fa-list-ul, .button-de-fonctionnement button:hover .fa-mobile-screen-button {
-  color: rgb(147, 86, 220);
-}
-
-@media (min-width: 768px) {
-  .button-de-fonctionnement {
-    display: flex;
-    flex-direction: row;
-  }
-}
 footer {
   background-color: rgb(53, 53, 53);
   padding: 10px;
@@ -523,8 +430,8 @@ footer {
 
 @media (min-width: 768px) {
   .card-menu {
-    width: 80%; /* Ajustez la largeur selon vos besoins */
-    margin: 0 auto; /* Centre l'article .card-menu */
+    width: 80%;
+    margin: 0 auto; /* Centrer l'article .card-menu */
   }
   .menu-cards {
     display: flex;
@@ -535,7 +442,7 @@ footer {
     padding-right: 200px;
   }
   h2 {
-    padding-left: 200px;
+    padding-left: 200px !important;
     width: auto;
     display: flex;
     justify-content: center;
@@ -573,11 +480,132 @@ footer {
     gap: 20px;
   }
   .image-restau {
-    width: 100%;
-    overflow: hidden;
-    height: 383px;
+    width: 100% !important;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.boutton-de-fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.boutton-de-fonctionnement .circle {
+  background-color: rgb(147, 86, 220);
+  color: white;
+  width: 26px;
+  height: 24px;
+  border-radius: 100%;
+}
+
+.button-de-fonctionnement {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.button-de-fonctionnement .button-container {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.button-de-fonctionnement .button-container a {
+  text-decoration: none;
+}
+.button-de-fonctionnement .button-container .choix-restau {
+  width: 90%;
+}
+.button-de-fonctionnement .button-container .degustation-restau {
+  width: 90%;
+}
+.button-de-fonctionnement .button-container .compo-menu {
+  width: 90%;
+}
+.button-de-fonctionnement .button-container .circle {
+  background-color: rgb(147, 86, 220);
+  color: white;
+  width: 26px;
+  height: 24px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: 20px;
+}
+.button-de-fonctionnement .button-container.container-1 .circle {
+  top: 20px;
+  left: 10px;
+}
+.button-de-fonctionnement .button-container.container-2 .circle {
+  top: 20px;
+  left: 10px;
+}
+.button-de-fonctionnement .button-container.container-3 .circle {
+  top: 20px;
+  left: 10px;
+}
+.button-de-fonctionnement button {
+  background-color: rgb(246, 246, 246);
+  border: none;
+  height: 72.38px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-de-fonctionnement button .fa-store, .button-de-fonctionnement button .fa-list-ul, .button-de-fonctionnement button .fa-mobile-screen-button {
+  color: rgb(126, 126, 126);
+  margin-right: 10px;
+}
+.button-de-fonctionnement button:hover .fa-store, .button-de-fonctionnement button:hover .fa-list-ul, .button-de-fonctionnement button:hover .fa-mobile-screen-button {
+  color: rgb(147, 86, 220);
+}
+.button-de-fonctionnement .heart-icon {
+  font-weight: 300;
+}
+.button-de-fonctionnement .heart-icon:hover {
+  color: rgb(147, 86, 220);
+}
+
+@media (min-width: 768px) {
+  .button-de-fonctionnement {
+    display: flex;
+    flex-direction: row;
+  }
+  h1 {
+    margin-left: 150px;
+    margin: 50px;
+  }
+  .restaurants-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    gap: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 50px;
+  }
+  .image-restau {
+    width: 40%;
     margin: 0 auto;
-    box-sizing: border-box;
+  }
+  .image-restau img {
+    width: 100%;
+  }
+  h2 {
+    padding-left: 10px;
+    border-bottom: none !important;
+  }
+  p {
+    padding-left: 10px;
   }
 }
 

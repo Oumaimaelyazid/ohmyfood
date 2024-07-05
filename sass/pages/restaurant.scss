@@ -218,8 +218,8 @@ h3 {
 
 @media (min-width:768px){
   .card-menu {
-    width: 80%; /* Ajustez la largeur selon vos besoins */
-    margin: 0 auto; /* Centre l'article .card-menu */
+    width: 80%; 
+    margin: 0 auto; /* Centrer l'article .card-menu */
   }
   .menu-cards {
     display: flex;
@@ -231,9 +231,9 @@ h3 {
 
   }
   h2 {
-    padding-left: 200px;
+    padding-left: 200px !important;
     width: auto;
-    display: flex; // Utilisez flex pour centrer le texte
+    display: flex; // 
     justify-content: center; // Centrez le texte horizontalement
     position: relative;
     border-bottom: none !important; // Supprime le border-bottom initial
@@ -243,10 +243,10 @@ h3 {
       content: "";
       display: block;
       position: absolute;
-      bottom: -5px; // Ajustez cette valeur selon la distance désirée par rapport au texte
+      bottom: -5px; // distance désirée par rapport au texte
       left: 110%;
       transform: translateX(-50%);
-      width: 20%; // Ajustez la largeur selon vos besoins
+      width: 20%; 
       border-bottom: solid 3px rgba(153, 226, 208, 1);
     }
   
@@ -276,11 +276,8 @@ ul {
 }
  
   .image-restau {
-    width: 100%;
-    overflow: hidden;
-    height:383px ;
-    margin: 0 auto;
-    box-sizing: border-box;
+    width: 100% !important;
+    
   }
 
  
