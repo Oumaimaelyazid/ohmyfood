@@ -331,19 +331,25 @@ body {
 }
 .menu-cards a .card .fa-circle-check {
   font-size: 2.5rem;
-  background-color: aquamarine;
+  background-color: aquamarine 1000ms;
   color: rgb(255, 255, 255);
-  transition: all 0.3s ease;
   opacity: 0;
-  margin-left: 0px;
+  margin-left: 10px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 1000ms;
 }
 .menu-cards a:hover .card-content .fa-circle-check {
   opacity: 1;
-  margin-left: 20px;
+  margin-left: 40px;
   background-color: aquamarine;
+  transform: scale(1.5) rotateY(0deg);
+  position: absolute;
+  left: 83%;
+  bottom: 50%;
 }
 .menu-cards a:hover .card-content h4 {
-  transform: translateX(-10px);
+  transform: translateX(-60px);
 }
 .menu-cards a:hover .card-content p.ellipsis {
   max-width: calc(100% - 40px);
@@ -482,6 +488,10 @@ footer {
   .image-restau {
     width: 100% !important;
   }
+  .image-restau img {
+    height: 445px;
+    object-fit: cover;
+  }
 }
 body {
   margin: 0;
@@ -562,18 +572,26 @@ body {
   justify-content: center;
   align-items: center;
 }
-.button-de-fonctionnement button .fa-store, .button-de-fonctionnement button .fa-list-ul, .button-de-fonctionnement button .fa-mobile-screen-button {
+.button-de-fonctionnement button .fa-store,
+.button-de-fonctionnement button .fa-list-ul,
+.button-de-fonctionnement button .fa-mobile-screen-button {
   color: rgb(126, 126, 126);
   margin-right: 10px;
 }
-.button-de-fonctionnement button:hover .fa-store, .button-de-fonctionnement button:hover .fa-list-ul, .button-de-fonctionnement button:hover .fa-mobile-screen-button {
+.button-de-fonctionnement button:hover .fa-store,
+.button-de-fonctionnement button:hover .fa-list-ul,
+.button-de-fonctionnement button:hover .fa-mobile-screen-button {
   color: rgb(147, 86, 220);
 }
-.button-de-fonctionnement .heart-icon {
+
+.restaurants .restaurants-cards .fa-heart {
   font-weight: 300;
 }
-.button-de-fonctionnement .heart-icon:hover {
+.restaurants .restaurants-cards .fa-heart:hover {
   color: rgb(147, 86, 220);
+}
+.restaurants .restaurants-cards a {
+  color: black;
 }
 
 @media (min-width: 768px) {
@@ -606,6 +624,38 @@ body {
   }
   p {
     padding-left: 10px;
+  }
+}
+.loader {
+  background-color: #ffffff;
+  opacity: 0.9;
+  height: 100vh;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  z-index: 1;
+  animation: disappear 200ms 3s forwards;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 70px;
+  width: 70px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgb(147, 86, 220);
+  border-radius: 50%;
+  animation: spin 3s infinite ease-in-out;
+}
+
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 

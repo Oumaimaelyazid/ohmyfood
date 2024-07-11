@@ -5,13 +5,13 @@
 }
 /* Variables */
 $primary-color: rgb(12, 12, 12);
-$secondary-color: rgb(234, 234, 234); 
+$secondary-color: rgb(234, 234, 234);
 $text-color: rgb(7, 7, 7);
 $header-height: 60px;
 
 /* Global styles */
 body {
-  font-family: 'Roboto', 'Shrikhand', sans-serif;
+  font-family: "Roboto", "Shrikhand", sans-serif;
   margin: 0;
   padding: 0;
   color: $text-color;
@@ -19,25 +19,23 @@ body {
 
 /* Header styles */
 .header-flex {
-    text-align: center;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-    width: 100%;
-    margin: 0;
-  
-    .logo {
-      
-      margin: 20px;
-  
-      img {
-        max-width: 50%; 
-        height: auto;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  margin: 0;
 
-      }
+  .logo {
+    margin: 20px;
+
+    img {
+      max-width: 50%;
+      height: auto;
     }
+  }
 
   .go-back-icon {
     position: absolute;
@@ -46,44 +44,40 @@ body {
     margin: 10px;
     font-size: 1.5rem;
   }
-
 }
 .image-restau {
   position: relative;
   width: 100%;
   height: 275px; /* Ajustez cette valeur selon la hauteur de l'image */
-
 }
-.image-restau img{
-    width: 100%; /* Adjust logo size as needed */
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    
+.image-restau img {
+  width: 100%; /* Adjust logo size as needed */
+  margin: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .restau-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px;
-    font-family: 'Shrikhand', cursive;
-    color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  font-family: "Shrikhand", cursive;
+  color: black;
 }
 .card-menu {
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    width:100%;
-    position: relative;
-    bottom: 30px; /* Ajustez cette valeur pour déplacer l'élément vers le haut */
-    background-color: $secondary-color;
-    padding: 20px;
-    padding-top: 50px;
-    z-index: 10;
-    margin-bottom: 0;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  width: 100%;
+  position: relative;
+  bottom: 30px; /* Ajustez cette valeur pour déplacer l'élément vers le haut */
+  background-color: $secondary-color;
+  padding: 20px;
+  padding-top: 50px;
+  z-index: 10;
+  margin-bottom: 0;
 
-
-h1 {
+  h1 {
     font-size: 2.4rem;
   }
 
@@ -94,32 +88,32 @@ h1 {
   }
 
   h2 {
-    font-family: 'Roboto' sans-serif;
+    font-family: "Roboto" sans-serif;
     display: inline-block;
     width: 10%;
     border-bottom: solid 3px rgba(153, 226, 208, 1);
-    padding-bottom : 5px;
+    padding-bottom: 5px;
     font-size: 1.2rem;
     margin: 20px 0;
     color: $primary-color;
     font-weight: 400;
-    text-align:left;
-}
+    text-align: left;
+  }
 }
 /* Menu cards */
 
 .menu-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  a {
     width: 100%;
-    padding: 0;
-    margin: 0;
-    a{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-       
+    display: flex;
+    justify-content: center;
+
     .card {
       background-color: white;
       width: 100%;
@@ -132,7 +126,7 @@ h1 {
       justify-content: space-between;
       position: relative;
       transition: all 0.3s ease;
-      
+
       .card-content {
         display: flex;
         justify-content: space-between;
@@ -141,84 +135,95 @@ h1 {
 
         .content-wrapper {
           display: flex;
-          align-items:center;
+          align-items: center;
           flex-grow: 1; // Pour occuper l'espace restant
         }
-        
+
         .ellipsis {
-          white-space:nowrap;
+          white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          max-width: calc(100% - 70px); // Ajustez la largeur en fonction de l'icône
+          max-width: calc(
+            100% - 70px
+          ); // Ajustez la largeur en fonction de l'icône
           transition: max-width 0.3s ease;
         }
 
-        h4{
+        h4 {
           font-size: 18px;
           font-weight: bold;
           color: black;
           transition: transform 0.3s ease; // Animation du prix
-          margin-left:auto; // Le prix reste à droite
+          margin-left: auto; // Le prix reste à droite
         }
       }
-        .fa-circle-check {
-          font-size: 2.5rem;
-          background-color:aquamarine ;
-          
-          color: rgb(255, 255, 255);
-          transition:all 0.3s ease ;
-          opacity: 0;
-          margin-left: 0px;
-        }
+      .fa-circle-check {
+        font-size: 2.5rem;
+        background-color: aquamarine 1000ms;
+
+        color: rgb(255, 255, 255);
+        opacity: 0;
+        margin-left: 10px;
+        transform-origin: right;
+        transform: scaleX(0) ;
+        transition: transform 1000ms;
       }
-      
-      &:hover {
+    }
+
+    &:hover {
       .card-content .fa-circle-check {
         opacity: 1;
-        margin-left: 20px; // Légère modification pour un effet visuel
-        background-color: aquamarine;
+        margin-left: 40px; // Légère modification pour un effet visuel
+        background-color: aquamarine ;
+        transform: scale(1.5) rotateY(0deg);
+        position:absolute;
+        left: 83%;
+        bottom: 50%;
+       
+
+        
+
 
       }
       .card-content h4 {
-        transform: translateX(-10px); // Animation du prix vers la gauche
+        transform: translateX(-60px); // Animation du prix vers la gauche
       }
       .card-content p.ellipsis {
-        max-width: calc(100% - 40px); // Ajustez en fonction de l'icône et de l'espace supplémentaire pour l'animation
-      }      }
+        max-width: calc(
+          100% - 40px
+        ); // Ajustez en fonction de l'icône et de l'espace supplémentaire pour l'animation
+      }
     }
-    }
- 
+  }
+}
 
 h3 {
-    color: black;
+  color: black;
 }
-.card-content  {
-    display: flex;
-    justify-content: space-between;
-    p.ellipsis {
-        margin-top: 5px;
-        color: rgba(0, 0, 0, 1);
-        font-size: 17px;
-    }
-    
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  p.ellipsis {
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 17px;
+  }
 }
-    a {
-        text-decoration: none !important;
-       
-    }
-    @import '../components/button.scss';
-    @import '../base/footer.scss';
-    footer {
-      position:static;
-      width:100%;
-      margin-top: -31px;
-      padding: 20px;
-      
-    }
+a {
+  text-decoration: none !important;
+}
+@import "../components/button.scss";
+@import "../base/footer.scss";
+footer {
+  position: static;
+  width: 100%;
+  margin-top: -31px;
+  padding: 20px;
+}
 
-@media (min-width:768px){
+@media (min-width: 768px) {
   .card-menu {
-    width: 80%; 
+    width: 80%;
     margin: 0 auto; /* Centrer l'article .card-menu */
   }
   .menu-cards {
@@ -228,16 +233,14 @@ h3 {
     justify-content: center;
     padding-left: 200px;
     padding-right: 200px;
-
   }
   h2 {
     padding-left: 200px !important;
     width: auto;
-    display: flex; // 
+    display: flex; //
     justify-content: center; // Centrez le texte horizontalement
     position: relative;
     border-bottom: none !important; // Supprime le border-bottom initial
-
 
     &::after {
       content: "";
@@ -246,40 +249,37 @@ h3 {
       bottom: -5px; // distance désirée par rapport au texte
       left: 110%;
       transform: translateX(-50%);
-      width: 20%; 
+      width: 20%;
       border-bottom: solid 3px rgba(153, 226, 208, 1);
     }
-  
-  
-}
- .restau-title {
-  display: flex;
-  justify-content: center;
-  gap: 30px
- }
- .button-container {
-  margin: 20px
- }
-footer {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 50px;
-
-}
-ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-
-}
- 
-  .image-restau {
-    width: 100% !important;
-    
+  }
+  .restau-title {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .button-container {
+    margin: 20px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
   }
 
- 
+  .image-restau {
+    width: 100% !important;
+
+    img {
+      height: 445px;
+      object-fit: cover;
+    }
+  }
 }
-   
