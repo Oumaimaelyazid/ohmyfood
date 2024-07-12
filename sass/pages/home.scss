@@ -135,9 +135,12 @@ body {
     width: 100%;
   }
 
-  h2 {
-    padding-left: 10px;
+  .restau-name {
+    padding-left: 10px !important;
     border-bottom: none !important;
+    &::after {
+      display: none;
+    }
   }
   p {
     padding-left: 10px;

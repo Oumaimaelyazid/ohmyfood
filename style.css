@@ -295,78 +295,76 @@ body {
   background-color: white;
   width: 100%;
   margin: 10px auto;
-  padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin: 20px;
   position: relative;
-  transition: all 0.3s ease;
+  padding: 0;
+  box-shadow: 2px 1px 8px -3px #000000;
 }
-.menu-cards a .card .card-content {
+.menu-cards a .card-content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  height: 100% !important; /* Ensure card-content takes full height of card */
 }
-.menu-cards a .card .card-content .content-wrapper {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-}
-.menu-cards a .card .card-content .ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: calc(100% - 70px);
-  transition: max-width 0.3s ease;
-}
-.menu-cards a .card .card-content h4 {
+.menu-cards a .card-content .prix {
   font-size: 18px;
   font-weight: bold;
   color: black;
-  transition: transform 0.3s ease;
+  padding: 0;
+  margin: 0;
   margin-left: auto;
+  margin-right: 5px;
+  align-self: center;
 }
-.menu-cards a .card .fa-circle-check {
-  font-size: 2.5rem;
-  background-color: aquamarine 1000ms;
-  color: rgb(255, 255, 255);
-  opacity: 0;
-  margin-left: 10px;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 1000ms;
+.menu-cards a .card-content .check {
+  background-color: rgba(22, 234, 163, 0.606);
+  height: 100%;
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin-right: -6rem;
+  width: 6rem;
+  transition: all 1s;
 }
-.menu-cards a:hover .card-content .fa-circle-check {
-  opacity: 1;
-  margin-left: 40px;
-  background-color: aquamarine;
-  transform: scale(1.5) rotateY(0deg);
-  position: absolute;
-  left: 83%;
-  bottom: 50%;
+.menu-cards a .card-content .check i {
+  background-color: white;
+  border-radius: 50%;
+  color: aquamarine;
+  padding: 10px;
+  font-size: large;
+  font-weight: bolder;
 }
-.menu-cards a:hover .card-content h4 {
-  transform: translateX(-60px);
+.menu-cards a .card-content:hover .check {
+  margin-right: 0;
 }
-.menu-cards a:hover .card-content p.ellipsis {
-  max-width: calc(100% - 40px);
+.menu-cards a .card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 h3 {
   color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.card-content {
-  display: flex;
-  justify-content: space-between;
-}
-.card-content p.ellipsis {
-  margin-top: 5px;
-  color: rgb(0, 0, 0);
-  font-size: 17px;
+p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 a {
@@ -618,9 +616,12 @@ body {
   .image-restau img {
     width: 100%;
   }
-  h2 {
-    padding-left: 10px;
+  .restau-name {
+    padding-left: 10px !important;
     border-bottom: none !important;
+  }
+  .restau-name::after {
+    display: none;
   }
   p {
     padding-left: 10px;
