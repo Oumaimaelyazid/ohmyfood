@@ -95,15 +95,16 @@ body {
   }
 }
 .restaurants {
+  background-color: rgb(243, 243, 243);
   .restaurants-cards {
     .fa-heart {
-      font-weight: 300; 
-    
+      font-weight: 300;
+
       &:hover {
         color: rgb(147, 86, 220);
       }
     }
-    a{
+    a {
       color: black;
     }
   }
@@ -137,19 +138,16 @@ body {
 
   .restau-name {
     padding-left: 10px !important;
-    border-bottom: none !important;
+
     &::after {
       display: none;
     }
   }
-  p {
-    padding-left: 10px;
-  }
 }
 .loader {
-  $animation-duration:3s;
+  $animation-duration: 3s;
 
-  background-color:#ffffff;
+  background-color: #ffffff;
   opacity: 0.9;
   height: 100vh;
   position: fixed;
@@ -160,27 +158,24 @@ body {
   animation: disappear 200ms $animation-duration forwards;
   transform-origin: top;
 
-  &::after{
+  &::after {
     content: "";
-    height: 70px; 
+    height: 70px;
     width: 70px;
-    border-right:5px solid transparent;
+    border-right: 5px solid transparent;
     border-top: 5px solid rgb(147, 86, 220);
     border-radius: 50%;
-   
+
     animation: spin $animation-duration infinite ease-in-out;
   }
 }
 @keyframes disappear {
-  
   to {
     transform: scale(0);
   }
-
 }
 @keyframes spin {
-  to{
+  to {
     transform: rotate(360deg);
   }
-
 }

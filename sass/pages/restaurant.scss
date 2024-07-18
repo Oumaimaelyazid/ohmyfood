@@ -96,7 +96,7 @@ body {
     font-size: 1.2rem;
     margin: 20px 0;
     color: $primary-color;
-    font-weight: 400;
+    font-weight: 300;
     text-align: left;
   }
 }
@@ -172,7 +172,7 @@ body {
           color: aquamarine;
           padding:10px ;
           font-size:large ;
-          font-weight: bolder;
+          font-weight:bolder;
         }
         
       }
@@ -202,6 +202,8 @@ body {
 h3 {
   color: black;
   overflow: hidden;
+  font-weight:600;
+  font-size:20px;
       white-space: nowrap;
       text-overflow: ellipsis;
 }
@@ -209,6 +211,9 @@ p{
   overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      color: #000000;
+      font-weight:300 ;
+      font-size: 18px;
 }
 
 a {

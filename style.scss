@@ -1,0 +1,18 @@
+/* Error: There is no module with the namespace "mixin".
+ *    ,
+ * 66 |       @include mixin.heart;
+ *    |       ^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   sass\Components\cards.scss 66:7  @import
+ *   sass\style.scss 3:9              root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: There is no module with the namespace "mixin".\a    \2577 \a 66 \2502        @include mixin.heart;\d\a    \2502        ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\Components\\cards.scss 66:7  @import\a   sass\\style.scss 3:9              root stylesheet';
+}

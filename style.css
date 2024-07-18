@@ -130,22 +130,61 @@ nav p {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  position: relative;
+}
+.card .card-title::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  font-weight: 400;
+  right: 1rem;
+  top: 50%;
+  transform: translate(-50%);
+  color: inherit;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  opacity: 1;
+  transition: all 200ms color ease-in-out; /* Transition pour un effet de changement de couleur en douceur */
+}
+.card .card-title::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  font-weight: 400;
+  right: 1rem;
+  top: 50%;
+  transform: translate(-50%);
+  color: inherit;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  opacity: 1;
+  transition: all 200ms color ease-in-out; /* Transition pour un effet de changement de couleur en douceur */
+  background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  opacity: 0;
+  color: transparent;
+  font-weight: 900;
+}
+.card .card-title:hover::after {
+  opacity: 1;
+  transform: translate(-50%) scale(1.1);
 }
 .card .card-title h2 {
   font-size: 1.5rem;
   margin: 10px 0;
 }
-.card .card-title i {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  color: rgb(68, 64, 72);
-  transition: color 0.3s ease; /* Transition pour un effet de changement de couleur en douceur */
-}
-.card .card-title i:hover .fa-heart {
-  color: rgb(147, 86, 220);
-}
 .card p {
-  font-size: 1.3rem;
   margin-top: 2px;
 }
 
@@ -273,7 +312,7 @@ body {
   font-size: 1.2rem;
   margin: 20px 0;
   color: rgb(12, 12, 12);
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
 }
 
@@ -357,6 +396,8 @@ body {
 h3 {
   color: black;
   overflow: hidden;
+  font-weight: 600;
+  font-size: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -365,6 +406,9 @@ p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: #000000;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 a {
@@ -582,6 +626,9 @@ body {
   color: rgb(147, 86, 220);
 }
 
+.restaurants {
+  background-color: rgb(243, 243, 243);
+}
 .restaurants .restaurants-cards .fa-heart {
   font-weight: 300;
 }
@@ -618,13 +665,9 @@ body {
   }
   .restau-name {
     padding-left: 10px !important;
-    border-bottom: none !important;
   }
   .restau-name::after {
     display: none;
-  }
-  p {
-    padding-left: 10px;
   }
 }
 .loader {
