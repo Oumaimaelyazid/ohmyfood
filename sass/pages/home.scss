@@ -1,9 +1,12 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   font-family: Roboto, sans-serif;
 }
-
+h1 {
+  font-size: 24px;
+  margin: 30px;
+}
 .boutton-de-fonctionnement {
   display: flex;
   flex-direction: column;
@@ -24,79 +27,87 @@ body {
 
   .button-container {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     width: 100%;
+
     a {
       text-decoration: none;
     }
-    .choix-restau {
-      width: 90%;
-    }
-    .degustation-restau {
-      width: 90%;
-    }
-    .compo-menu {
-      width: 90%;
-    }
-
-    .circle {
-      background-color: rgb(147, 86, 220);
-      color: white;
-      width: 26px;
-      height: 24px;
-      border-radius: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: -10px;
-      right: 20px;
-    }
-    &.container-1 .circle {
-      top: 20px;
-      left: 10px;
-    }
-    &.container-2 .circle {
-      top: 20px;
-      left: 10px;
-    }
-    &.container-3 .circle {
-      top: 20px;
-      left: 10px;
-    }
   }
-  button {
-    background-color: rgb(246, 246, 246);
-    border: none;
-    height: 72.38px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    font-weight: bold;
-    font-size: 18px;
-    width: 100%;
+  .choix-restau {
+    width: 90%;
+  }
+  .degustation-restau {
+    width: 90%;
+  }
+  .compo-menu {
+    width: 90%;
+  }
+
+  .circle {
+    background-color: rgb(147, 86, 220);
+    color: white;
+    width: 26px;
+    height: 24px;
+    border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 22px;
+    left: 10px;
+  }
+  &.container-1 .circle {
+    top: 20px;
+    left: 10px;
+  }
+  &.container-2 .circle {
+    top: 20px;
+    left: 10px;
+  }
+  &.container-3 .circle {
+    top: 20px;
+    left: 10px;
+  }
+}
+button {
+  background-color: rgb(246, 246, 246);
+  border: none;
+  height: 72.38px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15) !important;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 
+  .fa-store,
+  .fa-list-ul,
+  .fa-mobile-screen-button {
+    color: rgb(126, 126, 126);
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  p {
+    text-align: center;
+  }
+
+  &:hover {
     .fa-store,
     .fa-list-ul,
     .fa-mobile-screen-button {
-      color: rgb(126, 126, 126);
-      margin-right: 10px;
-    }
-
-    &:hover {
-      .fa-store,
-      .fa-list-ul,
-      .fa-mobile-screen-button {
-        color: rgb(147, 86, 220);
-      }
+      color: rgb(147, 86, 220);
     }
   }
 }
+
 .restaurants {
   background-color: rgb(243, 243, 243);
   .restaurants-cards {
+    margin: -50px 50px 50px 50px !important; // Marge de 50px en bas et sur les côtés
+
     .fa-heart {
       font-weight: 300;
 
@@ -114,17 +125,14 @@ body {
     display: flex;
     flex-direction: row;
   }
-  h1 {
-    margin-left: 150px;
-    margin: 50px;
-  }
   .restaurants-cards {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
-    gap: 60px;
-    padding-left: 100px;
-    padding-right: 100px;
-    margin: 50px;
+    gap: 100px;
+    margin: 0 50px 50px 50px !important;
+  }
+  .restaurants {
+    padding: 10px;
   }
 
   .image-restau {
@@ -137,7 +145,7 @@ body {
   }
 
   .restau-name {
-    padding-left: 10px !important;
+    padding: 0px !important;
 
     &::after {
       display: none;

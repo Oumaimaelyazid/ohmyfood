@@ -29,20 +29,25 @@ body {
   margin: 0;
 
   .logo {
-    margin: 20px;
 
     img {
-      max-width: 50%;
+      width: 200px;
       height: auto;
     }
   }
 
   .go-back-icon {
     position: absolute;
-    top: 10px;
+    top: 47px;
+    left:10px;
     align-self: flex-start;
     margin: 10px;
     font-size: 1.5rem;
+    
+    .fa-arrow-left{
+      color: black ;
+    }
+    
   }
 }
 .image-restau {
@@ -215,9 +220,10 @@ p{
       font-weight:300 ;
       font-size: 18px;
 }
-
 a {
   text-decoration: none !important;
+  margin-top: 30px !important;
+
 }
 @import "../components/button.scss";
 @import "../base/footer.scss";
@@ -265,8 +271,8 @@ footer {
     justify-content: center;
     gap: 30px;
   }
-  .button-container {
-    margin: 20px;
+  
+    
   }
   footer {
     display: flex;
@@ -289,4 +295,4 @@ footer {
       object-fit: cover;
     }
   }
-}
+

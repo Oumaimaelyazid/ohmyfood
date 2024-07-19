@@ -5,12 +5,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 20px;
     width: 100%;
-    padding: 20px;
+    padding: 25px;
 
     img {
-      max-width: 50%; /* Ajustez le pourcentage selon les besoins */
+      width: 200px; /* Ajustez le pourcentage selon les besoins */
       height: auto;
     }
   }
@@ -22,13 +21,12 @@
     background-color: rgb(234, 234, 234);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 
     p {
       margin-left: 20px;
-      font-size: 18px;
       font-family: Roboto, sans-serif;
-      font-weight: 500;
+      font-weight: 450;
       color:rgba(53, 53, 53, 1) ;
     }
      .localite-icone {
@@ -40,18 +38,29 @@ nav {
   background-color: rgb(243, 243, 243);
   padding-bottom: 30px;
 
-  h1,
+  h1{ 
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 20px;
+    margin-bottom: auto;
+    font-size: 40px;
+    font-weight: 700;
+    
+  }
   p {
     text-align: center;
     margin-top: 5px;
     padding-top: 20px;
+    margin-bottom: auto;
+    font-size: 18px;
   }
+  
 
   p {
     color: rgb(53, 53, 53);
     font-weight: 300;
     margin-left: 60px;
     margin-right: 60px;
-    font-size: 20px;
+    
   }
 }
