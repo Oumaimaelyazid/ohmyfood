@@ -37,24 +37,16 @@ nav {
 }
 nav h1 {
   text-align: center;
-  margin-top: 5px;
+  margin-top: 0px;
   padding-top: 20px;
-  margin-bottom: auto;
   font-size: 40px;
   font-weight: 700;
 }
-nav p {
+
+.message-daccueil {
   text-align: center;
-  margin-top: 5px;
-  padding-top: 20px;
-  margin-bottom: auto;
+  margin: 20px;
   font-size: 18px;
-}
-nav p {
-  color: rgb(53, 53, 53);
-  font-weight: 300;
-  margin-left: 60px;
-  margin-right: 60px;
 }
 
 .button-container {
@@ -331,7 +323,13 @@ button:hover .fa-mobile-screen-button {
   background-color: rgb(243, 243, 243);
 }
 .restaurants .restaurants-cards {
-  margin: -50px 50px 50px 50px !important;
+  margin: -17px 50px 50px 50px !important;
+}
+.restaurants .restaurants-cards p {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
 }
 .restaurants .restaurants-cards .fa-heart {
   font-weight: 300;
@@ -351,7 +349,7 @@ button:hover .fa-mobile-screen-button {
   .restaurants-cards {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
-    gap: 100px;
+    gap: 24px;
     margin: 0 50px 50px 50px !important;
   }
   .restaurants {
@@ -435,7 +433,7 @@ body {
 }
 .header-flex .go-back-icon {
   position: absolute;
-  top: 47px;
+  top: 20px;
   left: 10px;
   align-self: flex-start;
   margin: 10px;
@@ -470,7 +468,7 @@ body {
 .card-menu {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  width: 100%;
+  width: 80%;
   position: relative;
   bottom: 30px; /* Ajustez cette valeur pour déplacer l'élément vers le haut */
   background-color: rgb(234, 234, 234);
@@ -478,9 +476,10 @@ body {
   padding-top: 50px;
   z-index: 10;
   margin-bottom: 0;
+  margin: 0 auto;
 }
 .card-menu h1 {
-  font-size: 2.4rem;
+  font-size: 28px;
 }
 .card-menu i {
   font-size: 2rem;
@@ -494,10 +493,11 @@ body {
   border-bottom: solid 3px rgb(153, 226, 208);
   padding-bottom: 5px;
   font-size: 1.2rem;
-  margin: 20px 0;
+  margin-top: 25px;
+  margin-bottom: 15px;
   color: rgb(12, 12, 12);
   font-weight: 300;
-  text-align: left;
+  text-align: center;
 }
 
 /* Menu cards */
@@ -505,8 +505,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center !important;
   width: 100%;
-  padding: 0;
+  padding: 0px 150px;
   margin: 0;
 }
 .menu-cards a {
@@ -522,7 +523,6 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  margin: 20px;
   position: relative;
   padding: 0;
   box-shadow: 2px 1px 8px -3px #000000;
@@ -587,17 +587,19 @@ h3 {
 }
 
 p {
+  margin-top: 5px;
+  margin-bottom: auto;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   color: #000000;
   font-weight: 300;
   font-size: 18px;
+  text-align: left;
 }
 
 a {
   text-decoration: none !important;
-  margin-top: 30px !important;
 }
 
 .button-container {
@@ -608,6 +610,7 @@ a {
 .button-container .btn {
   background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
   width: 228px;
+  margin: 20px;
   height: 50px;
   color: white;
   font-weight: 500;
@@ -664,22 +667,15 @@ footer {
 @media (min-width: 768px) {
   .card-menu {
     width: 80%;
-    margin: 0 auto; /* Centrer l'article .card-menu */
-  }
-  .menu-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 200px;
-    padding-right: 200px;
+    margin: 150px auto; /* Centrer l'article .card-menu */
   }
   h2 {
-    padding-left: 200px !important;
+    padding-left: 150px !important;
     width: auto;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     position: relative;
+    margin-top: 20px;
     border-bottom: none !important;
   }
   h2::after {
@@ -687,9 +683,9 @@ footer {
     display: block;
     position: absolute;
     bottom: -5px;
-    left: 110%;
+    left: 170px;
     transform: translateX(-50%);
-    width: 20%;
+    width: 28%;
     border-bottom: solid 3px rgb(153, 226, 208);
   }
   .restau-title {

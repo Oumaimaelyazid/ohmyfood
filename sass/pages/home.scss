@@ -106,8 +106,13 @@ button {
 .restaurants {
   background-color: rgb(243, 243, 243);
   .restaurants-cards {
-    margin: -50px 50px 50px 50px !important; // Marge de 50px en bas et sur les côtés
-
+    margin: -17px 50px 50px 50px !important; // Marge de 50px en bas et sur les côtés
+  p{
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
     .fa-heart {
       font-weight: 300;
 
@@ -128,7 +133,7 @@ button {
   .restaurants-cards {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
-    gap: 100px;
+    gap: 24px;
     margin: 0 50px 50px 50px !important;
   }
   .restaurants {
