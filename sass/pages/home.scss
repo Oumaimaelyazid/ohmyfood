@@ -105,8 +105,11 @@ button {
 
 .restaurants {
   background-color: rgb(243, 243, 243);
+  padding-bottom: 60px;
+  padding-top:10px;
   .restaurants-cards {
-    margin: -17px 50px 50px 50px !important; // Marge de 50px en bas et sur les côtés
+    margin-left:20px !important;// 
+    margin-right: -20px;
   p{
     text-align: left;
     margin-left: 0;
@@ -137,7 +140,7 @@ button {
     margin: 0 50px 50px 50px !important;
   }
   .restaurants {
-    padding: 10px;
+    margin-right: -68px;
   }
 
   .image-restau {
@@ -192,3 +195,4 @@ button {
     transform: rotate(360deg);
   }
 }
+@import "../base/footer.scss"

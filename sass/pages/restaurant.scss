@@ -256,18 +256,19 @@ footer {
     justify-content: center;
     gap: 30px;
   }
-}
-footer {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 50px;
-}
-ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  
 }
 
 .image-restau {
