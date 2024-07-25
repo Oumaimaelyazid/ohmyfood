@@ -158,13 +158,13 @@ body {
         $button-width: 6rem;
         background-color: rgba(22, 234, 163, 0.606);
         height: 100%;
-        align-self: stretch;
+        align-self: stretch; /* s'etndre verticalement pour remplir l'espace du coneneur*/ 
         display: grid;
         place-items: center;
         padding: 0;
-        margin-right: -1 * $button-width;
+        margin-right: -1 * $button-width;/* Positionne le bouton hors de l'écran à droite pour qu'il n'apparaisse que lors du survol.*/
         width: $button-width;
-        transition: all 1s;
+        transition: all 1s; /*Applique une transition douce de 1 seconde pour la position du bouton*/
 
         i {
           background-color: white;
@@ -194,11 +194,11 @@ body {
 
 h3 {
   color: black;
-  overflow: hidden;
+  overflow: hidden; /*Cache toute partie du texte qui dépasse les limites du conteneur.*/
   font-weight: 600;
   font-size: 20px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  white-space: nowrap;/* Empêche le texte de se diviser en plusieurs lignes, forçant tout le texte à rester sur une seule ligne.*/
+  text-overflow: ellipsis; /*Ajoute des points de suspension ("...") à la fin du texte si celui-ci dépasse les limites du conteneur, indiquant qu'il y a plus de texte que ce qui est visible*/
 }
 p {
   margin-top: 5px;
@@ -270,7 +270,31 @@ footer {
   }
   
 }
+@media (min-width: 1024px) {
+  .card-menu {
+    width: 70%;
+    margin: 150px auto; /* Ajuste le centrage de l'article .card-menu pour les écrans larges */
+  }
+  .restau-title {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
 
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 60px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
+}
 .image-restau {
   width: 100% !important;
 

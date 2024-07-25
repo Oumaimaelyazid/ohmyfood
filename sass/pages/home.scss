@@ -160,19 +160,55 @@ button {
     }
   }
 }
+@media (min-width: 1024px) {
+  .button-de-fonctionnement {
+    /* Ajustements spécifiques pour les boutons de fonctionnement */
+    display: flex;
+    flex-direction: row;
+  }
+
+  .restaurants-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout for larger screens */
+    gap: 32px;
+    margin: 0 100px 50px 100px !important; /* Ajustement des marges pour les écrans larges */
+  }
+
+  .restaurants {
+    margin-right: -100px; /* Ajustement de la marge pour les écrans larges */
+  }
+
+  .image-restau {
+    width: 30%; /* Ajustement de la largeur de l'image pour les écrans larges */
+    margin: 0 auto;
+  }
+
+  .image-restau img {
+    width: 100%;
+    height: auto; /* Assurez-vous que les images conservent leurs proportions */
+  }
+
+  .restau-name {
+    padding: 0px !important;
+
+    &::after {
+      display: none;
+    }
+  }
+}
 .loader {
-  $animation-duration: 3s;
+  $animation-duration: 2s;
 
   background-color: #ffffff;
   opacity: 0.9;
   height: 100vh;
-  position: fixed;
+  position: fixed; /*Positionne l'élément de manière fixe, couvrant tout l'écran.*/
   display: grid;
   place-items: center;
-  inset: 0;
-  z-index: 1;
-  animation: disappear 200ms $animation-duration forwards;
-  transform-origin: top;
+  inset: 0; 
+  z-index: 1; /* s'etendre pour toucher tous les bords*/
+  animation: disappear 200ms $animation-duration forwards; /*animation-fill-mode :  rester dans l'état final de l'animation */
+  transform-origin: top; /*Définit le point d'origine de la transformation en haut.*/
 
   &::after {
     content: "";
@@ -182,11 +218,12 @@ button {
     border-top: 5px solid rgb(147, 86, 220);
     border-radius: 50%;
 
-    animation: spin $animation-duration infinite ease-in-out;
-  }
+    animation: spin $animation-duration infinite ease-in-out; /*Fonction de Timing : ease-in-out (commence et termine doucement)*/
+  
+    }
 }
-@keyframes disappear {
-  to {
+@keyframes disappear { /*l'element retrecit jusqu'a disparition*/
+  to {                   /*L'élément commence à sa taille normale.(scale 1)*/
     transform: scale(0);
   }
 }

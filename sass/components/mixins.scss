@@ -5,18 +5,18 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 6 Free";
-  content: "\f004";
-  font-size: 2rem;
-  position: absolute;
+  content: "\f004"; /*unicode de l'icone souhaitee*/
   font-weight: 400;
-  right: 1rem;
+  position: absolute;
+  font-size: 2rem;
+  right: 1rem; /* par rapport au parent*/
   top: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%); /*Place le cœur par apport a lui meme à droite avec une centration verticale.*/
   color: inherit;
-  background-clip: text !important;
-  -webkit-background-clip: text !important;
+  background-clip: text !important;/*fait que le dégradé de fond est coupé pour apparaître uniquement dans les zones del'icone.*/
+  -webkit-background-clip: text;
   opacity: 1;
-  transition: all 200ms color ease-in-out; /* Transition pour un effet de changement de couleur en douceur */
+  transition: all 200ms color ease-in-out; /*pour un effet de changement de couleur en douceur */
 }
 @mixin gradient($opacity: 0.9) {
   background: linear-gradient(

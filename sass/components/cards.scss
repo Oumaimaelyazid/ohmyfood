@@ -65,9 +65,9 @@
     }
     &::after {
       @include heart;
-      @include gradient(1);
+      @include gradient(1); /*Seule la couleur du dégradé de fond, définie par @include gradient(1);, est visible à l'intérieur des cœurs.*/
       opacity: 0;
-      color: transparent;
+      color: transparent; /* pour que le cœur de base ne montre pas sa couleur d'origine.*/
       font-weight: 900;
     }
     &:hover::after {
