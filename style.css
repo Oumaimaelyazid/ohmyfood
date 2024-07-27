@@ -186,6 +186,7 @@ nav h1 {
 }
 .card p {
   margin-top: 2px;
+  width: 200px;
 }
 
 footer {
@@ -349,6 +350,14 @@ button:hover .fa-mobile-screen-button {
   color: black;
 }
 
+@media (max-width: 380px) {
+  .boutton-de-fonctionnement {
+    margin: 0 !important;
+  }
+  .restaurants-cards {
+    margin: 0;
+  }
+}
 @media (min-width: 768px) {
   .button-de-fonctionnement {
     display: flex;
