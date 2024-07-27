@@ -71,7 +71,7 @@ body {
 .card-menu {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  width: 80%;
+  
   position: relative;
   bottom: 30px; /* Ajustez cette valeur pour déplacer l'élément vers le haut */
   background-color: $secondary-color;
@@ -79,7 +79,7 @@ body {
   padding-top: 50px;
   z-index: 10;
   margin-bottom: 0;
-  margin: 0 auto;
+  margin: 130px auto;
 
   h1 {
     font-size: 28px;
@@ -102,8 +102,8 @@ body {
     margin-bottom: 15px;
     color: $primary-color;
     font-weight: 300;
-    text-align: center;
-  }
+    margin-left: 83px; 
+   }
 }
 /* Menu cards */
 
@@ -113,7 +113,7 @@ body {
   align-items: center;
   justify-content: center !important;
   width: 100%;
-  padding: 0px 150px;
+  padding: 0px 80px;
   margin: 0;
 
   a {
@@ -228,11 +228,10 @@ footer {
 @media (min-width: 768px) {
   .card-menu {
     width: 80%;
-    margin: 150px auto; /* Centrer l'article .card-menu */
+    margin: 97px auto; /* Centrer l'article .card-menu */
   }
   
   h2 {
-    padding-left: 150px !important;
     width: auto;
     display: flex; //
     justify-content: left; // Centrez le texte horizontalement
@@ -245,9 +244,9 @@ footer {
       display: block;
       position: absolute;
       bottom: -5px; // distance désirée par rapport au texte
-      left: 170px;
+      left: 17px;
       transform: translateX(-50%);
-      width: 28%;
+      width: 43%;
       border-bottom: solid 3px rgba(153, 226, 208, 1);
     }
   }
@@ -273,7 +272,7 @@ footer {
 @media (min-width: 1024px) {
   .card-menu {
     width: 70%;
-    margin: 150px auto; /* Ajuste le centrage de l'article .card-menu pour les écrans larges */
+    margin: 87px auto; /* Ajuste le centrage de l'article .card-menu pour les écrans larges */
   }
   .restau-title {
     display: flex;
