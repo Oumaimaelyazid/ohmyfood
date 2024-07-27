@@ -101,7 +101,7 @@ nav h1 {
   justify-content: space-between;
   box-sizing: border-box;
   padding: 10px;
-  margin: 10px -25px;
+  margin: 10px 0px;
   position: relative;
 }
 .card img {
@@ -304,6 +304,7 @@ button {
   display: flex;
   justify-content: start;
   align-items: center;
+  text-align: start;
 }
 button .fa-store,
 button .fa-list-ul,
@@ -324,10 +325,6 @@ button:hover .fa-mobile-screen-button {
 .restaurants {
   background-color: rgb(243, 243, 243);
   padding: 10px 0 60px 0px;
-}
-.restaurants .restaurants-cards {
-  margin-left: 20px !important;
-  margin-right: -20px;
 }
 .restaurants .restaurants-cards p {
   text-align: left;
@@ -356,9 +353,6 @@ button:hover .fa-mobile-screen-button {
     gap: 24px;
     margin: 0 50px 50px 50px !important;
   }
-  .restaurants {
-    margin-right: -68px;
-  }
   .image-restau {
     width: 40%;
     margin: 0 auto;
@@ -384,9 +378,6 @@ button:hover .fa-mobile-screen-button {
     grid-template-columns: repeat(2, 1fr); /* 2 columns layout for larger screens */
     gap: 32px;
     margin: 0 100px 50px 100px !important; /* Ajustement des marges pour les écrans larges */
-  }
-  .restaurants {
-    margin-right: -100px; /* Ajustement de la marge pour les écrans larges */
   }
   .image-restau {
     width: 30%; /* Ajustement de la largeur de l'image pour les écrans larges */
@@ -425,8 +416,10 @@ button:hover .fa-mobile-screen-button {
   animation: spin 2s infinite ease-in-out; /*Fonction de Timing : ease-in-out (commence et termine doucement)*/
 }
 
-@keyframes disappear { /*l'element retrecit jusqu'a disparition*/
-  to { /*L'élément commence à sa taille normale.(scale 1)*/
+@keyframes disappear {
+  /*l'element retrecit jusqu'a disparition*/
+  to {
+    /*L'élément commence à sa taille normale.(scale 1)*/
     transform: scale(0);
   }
 }

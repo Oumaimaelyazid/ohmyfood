@@ -1,7 +1,6 @@
-
-  body {
-  margin: 100% ;
-  padding: 100% ;
+body {
+  margin: 100%;
+  padding: 100%;
   font-family: Roboto, sans-serif;
 }
 h1 {
@@ -83,6 +82,7 @@ button {
   display: flex;
   justify-content: start;
   align-items: center;
+  text-align: start;
 
   .fa-store,
   .fa-list-ul,
@@ -108,14 +108,12 @@ button {
   background-color: rgb(243, 243, 243);
   padding: 10px 0 60px 0px;
   .restaurants-cards {
-    margin-left:20px !important;// 
-    margin-right: -20px;
-  p{
-    text-align: left;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-  }
+    p {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+    }
     .fa-heart {
       font-weight: 300;
 
@@ -138,9 +136,6 @@ button {
     grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
     gap: 24px;
     margin: 0 50px 50px 50px !important;
-  }
-  .restaurants {
-    margin-right: -68px;
   }
 
   .image-restau {
@@ -169,13 +164,12 @@ button {
 
   .restaurants-cards {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns layout for larger screens */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns layout for larger screens */
     gap: 32px;
     margin: 0 100px 50px 100px !important; /* Ajustement des marges pour les écrans larges */
-  }
-
-  .restaurants {
-    margin-right: -100px; /* Ajustement de la marge pour les écrans larges */
   }
 
   .image-restau {
@@ -205,7 +199,7 @@ button {
   position: fixed; /*Positionne l'élément de manière fixe, couvrant tout l'écran.*/
   display: grid;
   place-items: center;
-  inset: 0; 
+  inset: 0;
   z-index: 1; /* s'etendre pour toucher tous les bords*/
   animation: disappear 200ms $animation-duration forwards; /*animation-fill-mode :  rester dans l'état final de l'animation */
   transform-origin: top; /*Définit le point d'origine de la transformation en haut.*/
@@ -219,11 +213,12 @@ button {
     border-radius: 50%;
 
     animation: spin $animation-duration infinite ease-in-out; /*Fonction de Timing : ease-in-out (commence et termine doucement)*/
-  
-    }
+  }
 }
-@keyframes disappear { /*l'element retrecit jusqu'a disparition*/
-  to {                   /*L'élément commence à sa taille normale.(scale 1)*/
+@keyframes disappear {
+  /*l'element retrecit jusqu'a disparition*/
+  to {
+    /*L'élément commence à sa taille normale.(scale 1)*/
     transform: scale(0);
   }
 }
@@ -232,4 +227,4 @@ button {
     transform: rotate(360deg);
   }
 }
-@import "../base/footer.scss"
+@import "../base/footer.scss";
