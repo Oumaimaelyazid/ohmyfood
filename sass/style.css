@@ -47,7 +47,6 @@ nav h1 {
   text-align: center;
   margin: 20px;
   font-size: 18px;
-  white-space: normal;
 }
 
 .button-container {
@@ -94,7 +93,7 @@ nav h1 {
 .card {
   background-color: white;
   width: 100%; /* Largeur fixe pour les cartes */
-  height: 100%;
+  height: auto;
   overflow: hidden;
   border-radius: 15px;
   display: flex;
@@ -103,8 +102,6 @@ nav h1 {
   box-sizing: border-box;
   margin: 10px 0px;
   position: relative;
-  margin-bottom: 30px;
-  padding-bottom: 16px;
 }
 .card img {
   width: 100%;
@@ -146,10 +143,8 @@ nav h1 {
   position: absolute;
   font-size: 2rem;
   right: 1rem; /* par rapport au parent*/
-  top: 40%;
-  transform: translate(
-    -50%
-  ); /*Place le cœur par apport a lui meme à droite avec une centration verticale.*/
+  top: 50%;
+  transform: translate(-50%); /*Place le cœur par apport a lui meme à droite avec une centration verticale.*/
   color: inherit;
   background-clip: text !important; /*fait que le dégradé de fond est coupé pour apparaître uniquement dans les zones del'icone.*/
   -webkit-background-clip: text;
@@ -168,10 +163,8 @@ nav h1 {
   position: absolute;
   font-size: 2rem;
   right: 1rem; /* par rapport au parent*/
-  top: 40%;
-  transform: translate(
-    -50%
-  ); /*Place le cœur par apport a lui meme à droite avec une centration verticale.*/
+  top: 50%;
+  transform: translate(-50%); /*Place le cœur par apport a lui meme à droite avec une centration verticale.*/
   color: inherit;
   background-clip: text !important; /*fait que le dégradé de fond est coupé pour apparaître uniquement dans les zones del'icone.*/
   -webkit-background-clip: text;
@@ -192,9 +185,9 @@ nav h1 {
   margin: 10px 0;
 }
 .card p {
-  margin-top: 0px;
-  width: 320px;
-  padding: 10px 0px 0px 0px;
+  margin-top: -17px;
+  width: 200px;
+  padding: 10px !important;
 }
 
 footer {
@@ -290,7 +283,7 @@ h1 {
   align-items: center;
   position: absolute;
   top: 22px;
-  left: 0px;
+  left: 10px;
 }
 .button-de-fonctionnement.container-1 .circle {
   top: 20px;
@@ -318,17 +311,12 @@ button {
   justify-content: start;
   align-items: center;
   text-align: start;
-
-  .span-menu {
-    display: block;
-    margin-left: 16px;
-  }
 }
 button .fa-store,
 button .fa-list-ul,
 button .fa-mobile-screen-button {
   color: rgb(126, 126, 126);
-  // margin-right: 25px;
+  margin-right: 25px;
   margin-left: 25px;
 }
 button p {
@@ -339,13 +327,16 @@ button:hover .fa-list-ul,
 button:hover .fa-mobile-screen-button {
   color: rgb(147, 86, 220);
 }
+button .span-menu {
+  display: block;
+  margin-left: 16px;
+}
 
 .restaurants {
   background-color: rgb(243, 243, 243);
   padding: 10px 0 60px 0px;
 }
 .restaurants .restaurants-cards {
-  // margin: 0 6rem;
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 0rem;
@@ -406,10 +397,7 @@ button:hover .fa-mobile-screen-button {
   }
   .restaurants-cards {
     display: grid !important;
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* 2 columns layout for larger screens */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout for larger screens */
     gap: 32px;
     margin: 0 100px 50px 100px !important; /* Ajustement des marges pour les écrans larges */
   }
@@ -631,7 +619,7 @@ body {
   padding: 0;
   margin: 0;
   margin-left: auto;
-  margin-right: 16px;
+  margin-right: 5px;
   align-self: center;
 }
 .menu-cards a .card-content .check {
@@ -827,4 +815,4 @@ footer {
   object-fit: cover;
 }
 
-/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.css.map */

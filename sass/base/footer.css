@@ -1,0 +1,31 @@
+footer {
+  background-color: rgb(53, 53, 53);
+  padding: 10px;
+}
+footer img {
+  width: 150px;
+  padding: 10px;
+}
+footer ul {
+  color: rgb(255, 255, 255);
+  list-style: none;
+  padding: 0px;
+  margin-top: auto;
+}
+footer ul li {
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  flex-direction: row;
+  gap: 10px;
+  padding: 5px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 1opx;
+  font-size: 1rem;
+}
+footer ul li i {
+  margin-right: 1px;
+}/*# sourceMappingURL=footer.css.map */

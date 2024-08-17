@@ -1,0 +1,334 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+/* Global styles */
+body {
+  font-family: "Roboto", "Shrikhand", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgb(7, 7, 7);
+}
+
+/* Header styles */
+.header-flex {
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  margin: 0;
+}
+.header-flex .logo img {
+  width: 200px;
+  height: auto;
+}
+.header-flex .go-back-icon {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  align-self: flex-start;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+.header-flex .go-back-icon .fa-arrow-left {
+  color: black;
+}
+
+.image-restau {
+  position: relative;
+  width: 100%;
+  height: 275px; /* Ajustez cette valeur selon la hauteur de l'image */
+}
+
+.image-restau img {
+  width: 100%; /* Adjust logo size as needed */
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.restau-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  font-family: "Shrikhand", cursive;
+  color: black;
+}
+
+.card-menu {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  position: relative;
+  bottom: 30px; /* Ajustez cette valeur pour déplacer l'élément vers le haut */
+  background-color: rgb(234, 234, 234);
+  padding: 20px;
+  padding-top: 50px;
+  z-index: 10;
+  margin-bottom: 0;
+}
+.card-menu h1 {
+  font-size: 28px;
+}
+.card-menu i {
+  font-size: 2rem;
+  color: rgb(12, 12, 12);
+  font-weight: 100;
+}
+.card-menu h2 {
+  font-family: "Roboto" sans-serif;
+  display: inline-block;
+  width: 10%;
+  border-bottom: solid 3px rgb(153, 226, 208);
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: rgb(12, 12, 12);
+  font-weight: 300;
+}
+
+/* Menu cards */
+.menu-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center !important;
+  width: 100%;
+  margin: 0;
+}
+.menu-cards a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.menu-cards a .card {
+  background-color: white;
+  width: 100%;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.231372549);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+  box-shadow: 2px 1px 8px -3px #000000;
+}
+.menu-cards a .card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 100% !important; /* Ensure card-content takes full height of card */
+}
+.menu-cards a .card-content .prix {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  margin-right: 5px;
+  align-self: center;
+}
+.menu-cards a .card-content .check {
+  background-color: rgba(22, 234, 163, 0.606);
+  height: auto;
+  align-self: stretch; /* s'etndre verticalement pour remplir l'espace du coneneur*/
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin-right: -6rem; /* Positionne le bouton hors de l'écran à droite pour qu'il n'apparaisse que lors du survol.*/
+  width: 6rem;
+  transition: all 1s; /*Applique une transition douce de 1 seconde pour la position du bouton*/
+}
+.menu-cards a .card-content .check i {
+  background-color: white;
+  border-radius: 50%;
+  color: aquamarine;
+  padding: 10px;
+  font-size: small;
+  font-weight: bolder;
+}
+.menu-cards a .card-content:hover .check {
+  margin-right: 0;
+  width: 5rem;
+  height: auto;
+}
+.menu-cards a .card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+h3 {
+  color: black;
+  overflow: hidden; /*Cache toute partie du texte qui dépasse les limites du conteneur.*/
+  font-weight: 600;
+  font-size: 20px;
+  white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes, forçant tout le texte à rester sur une seule ligne.*/
+  text-overflow: ellipsis; /*Ajoute des points de suspension ("...") à la fin du texte si celui-ci dépasse les limites du conteneur, indiquant qu'il y a plus de texte que ce qui est visible*/
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #000000;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: left;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-container .btn {
+  background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  width: 228px;
+  margin: 20px;
+  height: 50px;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  background-color: rgb(53, 53, 53);
+  padding: 10px;
+}
+footer img {
+  width: 150px;
+  padding: 10px;
+}
+footer ul {
+  color: rgb(255, 255, 255);
+  list-style: none;
+  padding: 0px;
+  margin-top: auto;
+}
+footer ul li {
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  flex-direction: row;
+  gap: 10px;
+  padding: 5px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 1opx;
+  font-size: 1rem;
+}
+footer ul li i {
+  margin-right: 1px;
+}
+
+footer {
+  position: static;
+  width: 100%;
+  margin-top: -31px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .card-menu {
+    width: 80%;
+    margin: 97px auto; /* Centrer l'article .card-menu */
+  }
+  h2 {
+    width: auto;
+    display: flex;
+    justify-content: left;
+    position: relative;
+    margin-top: 20px;
+    border-bottom: none !important;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 17px;
+    transform: translateX(-50%);
+    width: 43%;
+    border-bottom: solid 3px rgb(153, 226, 208);
+  }
+  .restau-title {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .card-menu {
+    width: 70%;
+    margin: 87px auto; /* Ajuste le centrage de l'article .card-menu pour les écrans larges */
+  }
+  .restau-title {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 60px;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
+}
+.image-restau {
+  width: 100% !important;
+}
+.image-restau img {
+  height: 445px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=restaurant.css.map */

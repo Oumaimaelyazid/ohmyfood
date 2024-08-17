@@ -67,6 +67,26 @@ body {
   margin: 10px;
   font-family: "Shrikhand", cursive;
   color: black;
+  position: relative;
+
+  &::before {
+    @include heart;
+    position: absolute;
+    top: 4px;
+  }
+  &::after {
+    @include heart;
+    @include gradient(1); /*Seule la couleur du dégradé de fond, définie par @include gradient(1);, est visible à l'intérieur des cœurs.*/
+    opacity: 0;
+    color: transparent; /* pour que le cœur de base ne montre pas sa couleur d'origine.*/
+    font-weight: 900;
+    position: absolute;
+    top: 4px;
+  }
+  &:hover::after {
+    opacity: 1;
+    transform: translate(-50%) scale(1.1);
+  }
 }
 .card-menu {
   border-top-left-radius: 50px;
@@ -154,7 +174,7 @@ body {
       .check {
         $button-width: 6rem;
         background-color: rgba(22, 234, 163, 0.606);
-        height: 100%;
+        height: auto;
         align-self: stretch; /* s'etndre verticalement pour remplir l'espace du coneneur*/
         display: grid;
         place-items: center;
@@ -175,6 +195,7 @@ body {
       &:hover .check {
         margin-right: 0;
         width: 5rem;
+        height: auto;
       }
     }
 
@@ -269,6 +290,8 @@ footer {
   .card-menu {
     width: 70%;
     margin: 87px auto; /* Ajuste le centrage de l'article .card-menu pour les écrans larges */
+    p{
+    }
   }
   .restau-title {
     display: flex;

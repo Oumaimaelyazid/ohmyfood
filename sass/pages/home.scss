@@ -5,10 +5,9 @@ body {
 }
 h1 {
   font-size: 24px;
-  
 }
 .home-title {
-  margin: 30px 100px;
+  margin: 30px 30px;
 }
 .boutton-de-fonctionnement {
   display: flex;
@@ -107,16 +106,24 @@ button {
       color: rgb(147, 86, 220);
     }
   }
+
+  .span-menu {
+    display: block;
+    margin-left: 16px;
+  }
 }
 
 .restaurants {
   background-color: rgb(243, 243, 243);
   padding: 10px 0 60px 0px;
   .restaurants-cards {
-    margin: 0 6rem;
+    //margin: 0 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0rem;
     p {
       text-align: left;
-      margin-left: 0;
+      margin-left: 10px;
       margin-right: 0;
       padding: 0;
     }
@@ -149,7 +156,6 @@ button {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
     gap: 24px;
-    
   }
 
   .image-restau {

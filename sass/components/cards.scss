@@ -30,6 +30,8 @@
   box-sizing: border-box;
   margin: 10px 0px;
   position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 16px;
 
   img {
     width: 100%;
@@ -58,7 +60,7 @@
     justify-content: space-between;
     width: 100%;
     position: relative;
-    padding: 10px;
+    padding-left: 10px;
 
     &::before {
       @include heart;
@@ -82,8 +84,6 @@
   }
 
   p {
-    margin-top: -17px;
-    width:200px;
-    padding: 10px !important;
+    max-width:335px;
   }
 }

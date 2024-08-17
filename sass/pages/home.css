@@ -1,0 +1,260 @@
+@charset "UTF-8";
+body {
+  margin: 100%;
+  padding: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.home-title {
+  margin: 30px 30px;
+}
+
+.boutton-de-fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.boutton-de-fonctionnement .circle {
+  background-color: rgb(147, 86, 220);
+  color: white;
+  width: 26px;
+  height: 24px;
+  border-radius: 100%;
+}
+
+.button-de-fonctionnement {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 5rem;
+}
+.button-de-fonctionnement .button-container {
+  position: relative;
+  margin-bottom: 60px;
+  width: 100%;
+}
+.button-de-fonctionnement .button-container a {
+  text-decoration: none;
+}
+.button-de-fonctionnement .choix-restau {
+  width: 90%;
+}
+.button-de-fonctionnement .degustation-restau {
+  width: 90%;
+}
+.button-de-fonctionnement .compo-menu {
+  width: 90%;
+}
+.button-de-fonctionnement .circle {
+  background-color: rgb(147, 86, 220);
+  color: white;
+  width: 26px;
+  height: 24px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 22px;
+  left: 10px;
+}
+.button-de-fonctionnement.container-1 .circle {
+  top: 20px;
+  left: 10px;
+}
+.button-de-fonctionnement.container-2 .circle {
+  top: 20px;
+  left: 10px;
+}
+.button-de-fonctionnement.container-3 .circle {
+  top: 20px;
+  left: 10px;
+}
+
+button {
+  background-color: rgb(246, 246, 246);
+  border: none;
+  height: 72.38px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15) !important;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: start;
+}
+button .fa-store,
+button .fa-list-ul,
+button .fa-mobile-screen-button {
+  color: rgb(126, 126, 126);
+  margin-right: 25px;
+  margin-left: 25px;
+}
+button p {
+  text-align: center;
+}
+button:hover .fa-store,
+button:hover .fa-list-ul,
+button:hover .fa-mobile-screen-button {
+  color: rgb(147, 86, 220);
+}
+button .span-menu {
+  display: block;
+  margin-left: 16px;
+}
+
+.restaurants {
+  background-color: rgb(243, 243, 243);
+  padding: 10px 0 60px 0px;
+}
+.restaurants .restaurants-cards {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0rem;
+}
+.restaurants .restaurants-cards p {
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 0;
+  padding: 0;
+}
+.restaurants .restaurants-cards .fa-heart {
+  font-weight: 300;
+}
+.restaurants .restaurants-cards .fa-heart:hover {
+  color: rgb(147, 86, 220);
+}
+.restaurants .restaurants-cards a {
+  color: black;
+}
+
+@media (max-width: 380px) {
+  .boutton-de-fonctionnement {
+    margin: 0 !important;
+  }
+  .restaurants-cards {
+    margin: 0;
+  }
+}
+@media (min-width: 768px) {
+  .button-de-fonctionnement {
+    display: flex;
+    flex-direction: row;
+  }
+  .restaurants-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    gap: 24px;
+  }
+  .image-restau {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .image-restau img {
+    width: 100%;
+  }
+  .restau-name {
+    padding: 0px !important;
+  }
+  .restau-name::after {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .button-de-fonctionnement {
+    /* Ajustements spécifiques pour les boutons de fonctionnement */
+    display: flex;
+    flex-direction: row;
+  }
+  .restaurants-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout for larger screens */
+    gap: 32px;
+    margin: 0 100px 50px 100px !important; /* Ajustement des marges pour les écrans larges */
+  }
+  .image-restau {
+    width: 30%; /* Ajustement de la largeur de l'image pour les écrans larges */
+    margin: 0 auto;
+  }
+  .image-restau img {
+    width: 100%;
+    height: auto; /* Assurez-vous que les images conservent leurs proportions */
+  }
+  .restau-name {
+    padding: 0px !important;
+  }
+  .restau-name::after {
+    display: none;
+  }
+}
+.loader {
+  background-color: #ffffff;
+  opacity: 0.9;
+  height: 100vh;
+  position: fixed; /*Positionne l'élément de manière fixe, couvrant tout l'écran.*/
+  display: grid;
+  place-items: center;
+  inset: 0;
+  z-index: 1; /* s'etendre pour toucher tous les bords*/
+  animation: disappear 200ms 2s forwards; /*animation-fill-mode :  rester dans l'état final de l'animation */
+  transform-origin: top; /*Définit le point d'origine de la transformation en haut.*/
+}
+.loader::after {
+  content: "";
+  height: 70px;
+  width: 70px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgb(147, 86, 220);
+  border-radius: 50%;
+  animation: spin 2s infinite ease-in-out; /*Fonction de Timing : ease-in-out (commence et termine doucement)*/
+}
+
+@keyframes disappear {
+  /*l'element retrecit jusqu'a disparition*/
+  to {
+    /*L'élément commence à sa taille normale.(scale 1)*/
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+footer {
+  background-color: rgb(53, 53, 53);
+  padding: 10px;
+}
+footer img {
+  width: 150px;
+  padding: 10px;
+}
+footer ul {
+  color: rgb(255, 255, 255);
+  list-style: none;
+  padding: 0px;
+  margin-top: auto;
+}
+footer ul li {
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  flex-direction: row;
+  gap: 10px;
+  padding: 5px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 1opx;
+  font-size: 1rem;
+}
+footer ul li i {
+  margin-right: 1px;
+}/*# sourceMappingURL=home.css.map */

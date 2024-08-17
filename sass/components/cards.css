@@ -1,0 +1,121 @@
+@charset "UTF-8";
+.Restaurants {
+  background-color: rgb(243, 243, 243);
+}
+.Restaurants h1 {
+  padding: 20px;
+}
+.Restaurants .restaurants-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+.Restaurants .restaurants-cards a {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  width: 100%; /* Largeur fixe pour les cartes */
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 10px 0px;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+}
+.card img {
+  width: 100%;
+  height: 231px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.card .rectangle {
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  background-color: rgb(153, 226, 208);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  color: rgb(0, 135, 102);
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  line-height: 27.41px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.card .card-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+}
+.card .card-title::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  content: "\f004"; /*unicode de l'icone souhaitee*/
+  font-weight: 400;
+  position: absolute;
+  font-size: 2rem;
+  right: 1rem; /* par rapport au parent*/
+  top: 40%;
+  transform: translate(-50%); /*Place le cœur par apport a lui meme à droite avec une centration verticale.*/
+  color: inherit;
+  background-clip: text !important; /*fait que le dégradé de fond est coupé pour apparaître uniquement dans les zones del'icone.*/
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms color ease-in-out; /*pour un effet de changement de couleur en douceur */
+}
+.card .card-title::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  content: "\f004"; /*unicode de l'icone souhaitee*/
+  font-weight: 400;
+  position: absolute;
+  font-size: 2rem;
+  right: 1rem; /* par rapport au parent*/
+  top: 40%;
+  transform: translate(-50%); /*Place le cœur par apport a lui meme à droite avec une centration verticale.*/
+  color: inherit;
+  background-clip: text !important; /*fait que le dégradé de fond est coupé pour apparaître uniquement dans les zones del'icone.*/
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms color ease-in-out; /*pour un effet de changement de couleur en douceur */
+  background: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  /*Seule la couleur du dégradé de fond, définie par @include gradient(1);, est visible à l'intérieur des cœurs.*/
+  opacity: 0;
+  color: transparent; /* pour que le cœur de base ne montre pas sa couleur d'origine.*/
+  font-weight: 900;
+}
+.card .card-title:hover::after {
+  opacity: 1;
+  transform: translate(-50%) scale(1.1);
+}
+.card .card-title h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.card p {
+  margin-top: -17px;
+  width: 200px;
+  padding: 10px !important;
+}/*# sourceMappingURL=cards.css.map */

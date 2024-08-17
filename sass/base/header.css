@@ -1,0 +1,49 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px;
+}
+.logo img {
+  width: 200px; /* Ajustez le pourcentage selon les besoins */
+  height: auto;
+}
+
+.formulaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(234, 234, 234);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  padding: 10px;
+}
+.formulaire p {
+  margin-left: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 450;
+  color: rgb(53, 53, 53);
+}
+.formulaire .localite-icone {
+  color: rgb(53, 53, 53);
+}
+
+nav {
+  background-color: rgb(243, 243, 243);
+  padding-bottom: 30px;
+}
+nav h1 {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 20px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.message-daccueil {
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+}/*# sourceMappingURL=header.css.map */
