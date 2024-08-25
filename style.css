@@ -47,6 +47,7 @@ nav h1 {
   text-align: center;
   margin: 20px;
   font-size: 18px;
+  white-space: normal;
 }
 
 .button-container {
