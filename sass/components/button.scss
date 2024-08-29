@@ -19,6 +19,9 @@
     border: none;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: filter 0.3s ease; /* Ajout de la transition */
   }
+  .btn:hover {
+    filter: brightness(1.2); /* Rend le bouton 20% plus clair au survol */
+}
 }

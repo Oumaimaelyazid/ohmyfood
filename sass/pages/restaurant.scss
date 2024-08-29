@@ -132,6 +132,20 @@ body {
   justify-content: center !important;
   width: 100%;
   margin: 0;
+  animation: appear 3s;
+
+      @keyframes appear {
+        0%{
+          transform: translateY(50%);
+          opacity: 0;
+        
+        }
+        100%{
+          transform: translateY(0);
+          opacity: 1;
+
+        }
+      }
 
   a {
     width: 100%;
@@ -159,6 +173,7 @@ body {
       align-items: center;
       position: relative;
       height: 100% !important; /* Ensure card-content takes full height of card */
+      
 
       .prix {
         font-size: 18px;
@@ -233,6 +248,7 @@ p {
 
 a {
   text-decoration: none !important;
+
 }
 @import "../components/button.scss";
 @import "../base/footer.scss";
@@ -290,8 +306,7 @@ footer {
   .card-menu {
     width: 70%;
     margin: 87px auto; /* Ajuste le centrage de l'article .card-menu pour les écrans larges */
-    p{
-    }
+    
   }
   .restau-title {
     display: flex;

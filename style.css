@@ -70,7 +70,10 @@ nav h1 {
   border: none;
   text-align: center;
   cursor: pointer;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: filter 0.3s ease; /* Ajout de la transition */
+}
+.button-container .btn:hover {
+  filter: brightness(1.2); /* Rend le bouton 20% plus clair au survol */
 }
 
 .Restaurants {
@@ -358,14 +361,6 @@ button .span-menu {
   color: black;
 }
 
-@media (max-width: 380px) {
-  .boutton-de-fonctionnement {
-    margin: 0 !important;
-  }
-  .restaurants-cards {
-    margin: 0;
-  }
-}
 @media (min-width: 768px) {
   .button-de-fonctionnement {
     display: flex;
@@ -641,6 +636,17 @@ body {
   justify-content: center !important;
   width: 100%;
   margin: 0;
+  animation: appear 3s;
+}
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .menu-cards a {
   width: 100%;
@@ -756,7 +762,10 @@ a {
   border: none;
   text-align: center;
   cursor: pointer;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: filter 0.3s ease; /* Ajout de la transition */
+}
+.button-container .btn:hover {
+  filter: brightness(1.2); /* Rend le bouton 20% plus clair au survol */
 }
 
 footer {

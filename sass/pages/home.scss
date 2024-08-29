@@ -127,7 +127,7 @@ button {
       margin-right: 0;
       padding: 0;
     }
-    .fa-heart {
+   .fa-heart {
       font-weight: 300;
 
       &:hover {
@@ -137,14 +137,6 @@ button {
     a {
       color: black;
     }
-  }
-}
-@media (max-width: 380px) {
-  .boutton-de-fonctionnement {
-    margin: 0 !important;
-  }
-  .restaurants-cards {
-    margin: 0;
   }
 }
 @media (min-width: 768px) {
